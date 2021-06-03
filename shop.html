@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Каталог</title>
+</head>
+
+
+<body>
+    <header class="header">
+    <div class="container">
+        <div id="nav" class="navbar">
+            <div class="navbar__logo">
+                <a href="/"><svg><use xlink:href="img/svg/sprite.svg#logo"></use></svg></a>
+            </div>
+            <div class="navbar__phone">
+                <div class="navbar__phone--current">
+                    <span>+38 050 20 44 712</span>
+                    <svg><use xlink:href="img/svg/sprite.svg#arrow-down"></use></svg>
+                </div>
+                <ul class="navbar__phone--dropdown">
+                    <li><a href="tel:+38 050 20 44 712">+38 050 20 44 712</a></li>
+                    <li><a href="tel:+38 050 20 44 712">+38 050 20 44 712</a></li>
+                </ul>
+            </div>
+            <div class="navbar__collapse">
+                <span></span>
+            </div>
+            <div class="navbar-block">
+                <ul class="navbar__menu">
+                    <li><a href="#">Ретро Автомобили</a></li>
+                    <li><a href="#">Мотоциклы</a></li>
+                    <li><a href="#">Реставрация</a></li>
+                    <li><a href="#">Запчасти</a></li>
+                    <li><a href="#">Аренда</a></li>
+                </ul>
+                <div class="navbar-block-link">
+                    <div class="navbar__lang">
+                        <a class="navbar__lang--current" href="#" data-lang="">
+                            <span>RU</span>
+                            <svg><use xlink:href="img/svg/sprite.svg#arrow-down"></use></svg>
+                        </a>
+                        <ul class="navbar__lang--dropdown">
+                            <li><a href="#" data-lang="ua">UA</a></li>
+                            <li><a href="#" data-lang="ru">RU</a></li>
+                        </ul>
+                    </div>
+                    <a class="navbar__btn" href="javascript:void(0)">Перезвоните мне!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <main>
+        <div class="shop">
+    <div class="container">
+        <div class="shop-wrapper">
+            <aside class="shop-aside">
+                <div class="shop-aside__title">
+                    <span>Фильтры</span>
+                    <a class="close" href="#"><svg><use xlink:href="img/svg/sprite.svg#cancel"></use></svg></a>
+                </div>
+                <div class="categories">
+                    <a class="active" href="#">Ретро автомобили</a>
+                    <a href="#">Мотоциклы</a>
+                    <a href="#">Продажа запчастей</a>
+                    <a href="#">Реставрация</a>
+                    <a href="#">Аренда</a>
+                </div>
+                <div class="filter">
+                    <div class="filter__title">Фильтр</div>
+                    <div class="filter__price">
+                        <div class="txt">Стоимость, €</div>
+                        <div class="col-number">
+                            <div>От <input type="text" id="mileageOne" readonly></div>
+                            <div>До <input type="text" id="mileageTwo" readonly></div>
+                        </div>
+                        <div class="col-range">
+                            <div id="mileage-range"></div>
+                        </div>
+                    </div>
+                    <div class="filter__state">
+                        <div class="txt">Состояние:</div>
+                        <div class="filter__state-input">
+                            <label for="state-5">
+                                <input type="checkbox" name="state" id="state-5">
+                                <span class="checkmark"></span>
+                                <div class="star">
+                                    <svg class="primary-color"><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                    <svg class="primary-color"><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                    <svg class="primary-color"><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                    <svg class="primary-color"><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                    <svg class="primary-color"><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                </div>
+                                <div class="star-count">10/10</div>
+                            </label>
+                            <label for="state-4">
+                                <input type="checkbox" name="state" id="state-4">
+                                <span class="checkmark"></span>
+                                <div class="star">
+                                    <svg class="primary-color"><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                    <svg class="primary-color"><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                    <svg class="primary-color"><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                    <svg class="primary-color"><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                    <svg><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                </div>
+                                <div class="star-count">8/10</div>
+                            </label>
+                            <label for="state-3">
+                                <input type="checkbox" name="state" id="state-3">
+                                <span class="checkmark"></span>
+                                <div class="star">
+                                    <svg class="primary-color"><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                    <svg class="primary-color"><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                    <svg class="primary-color"><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                    <svg><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                    <svg><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                </div>
+                                <div class="star-count">6/10</div>
+                            </label>
+                            <label for="state-2">
+                                <input type="checkbox" name="state" id="state-2">
+                                <span class="checkmark"></span>
+                                <div class="star">
+                                    <svg class="primary-color"><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                    <svg class="primary-color"><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                    <svg><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                    <svg><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                    <svg><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                </div>
+                                <div class="star-count">4/10</div>
+                            </label>
+                            <label for="state-1">
+                                <input type="checkbox" name="state" id="state-1">
+                                <span class="checkmark"></span>
+                                <div class="star">
+                                    <svg class="primary-color"><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                    <svg><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                    <svg><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                    <svg><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                    <svg><use xlink:href="img/svg/sprite.svg#star"></use></svg>
+                                </div>
+                                <div class="star-count">2/10</div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="filter__body">
+                        <div class="txt">Кузов:</div>
+                        <select class="justselect">
+                            <option selected="selected">Кабриолет</option>
+                            <option value="Седан">Седан</option>
+                            <option value="Хэтчбек">Хэтчбек</option>
+                            <option value="Универсал">Универсал</option>
+                        </select>
+                    </div>
+                    <div class="filter__fuel">
+                        <div class="txt">Тип топлива:</div>
+                        <label for="fuel-1">
+                            <input type="checkbox" name="fuel" id="fuel-1">
+                            <span class="checkmark"></span>
+                            <div class="fuel-type">Бензин<span>(12)</span></div>
+                        </label>
+                        <label for="fuel-2">
+                            <input type="checkbox" name="fuel" id="fuel-2">
+                            <span class="checkmark"></span>
+                            <div class="fuel-type">Газ<span>(1)</span></div>
+                        </label>
+                        <label for="fuel-3">
+                            <input type="checkbox" name="fuel" id="fuel-3">
+                            <span class="checkmark"></span>
+                            <div class="fuel-type">Дизель<span>(9)</span></div>
+                        </label>
+                    </div>
+                </div>
+            </aside>
+            <div class="shop-content">
+                <a class="btn-aside" href="#">Фильтры</a>
+                <div class="catalog-list">
+                    <div class="catalog-item">
+                        <a class="img" href="#">
+                            <img src="img/cat-1.jpg" alt="car 1">
+                        </a>
+                        <a class="catalog-item-info" href="#">
+                            <div class="title">Beauford Open Tourer <span>35,000 €</span></div>
+                            <div class="arrow"><svg><use xlink:href="img/svg/sprite.svg#arrow-right"></use></svg></div>
+                        </a>
+                    </div>
+                    <div class="catalog-item">
+                        <a class="img" href="#">
+                            <img src="img/cat-2.jpg" alt="car 1">
+                        </a>
+                        <a class="catalog-item-info" href="#">
+                            <div class="title">Beauford Open Tourer <span>35,000 €</span></div>
+                            <div class="arrow"><svg><use xlink:href="img/svg/sprite.svg#arrow-right"></use></svg></div>
+                        </a>
+                    </div>
+                    <div class="catalog-item">
+                        <a class="img" href="#">
+                            <img src="img/cat-3.jpg" alt="car 1">
+                        </a>
+                        <a class="catalog-item-info" href="#">
+                            <div class="title">Beauford Open Tourer <span>35,000 €</span></div>
+                            <div class="arrow"><svg><use xlink:href="img/svg/sprite.svg#arrow-right"></use></svg></div>
+                        </a>
+                    </div>
+                    <div class="catalog-item">
+                        <a class="img" href="#">
+                            <img src="img/cat-4.jpg" alt="car 1">
+                        </a>
+                        <a class="catalog-item-info" href="#">
+                            <div class="title">Beauford Open Tourer <span>35,000 €</span></div>
+                            <div class="arrow"><svg><use xlink:href="img/svg/sprite.svg#arrow-right"></use></svg></div>
+                        </a>
+                    </div>
+                    <div class="catalog-item">
+                        <a class="img" href="#">
+                            <img src="img/cat-5.jpg" alt="car 1">
+                        </a>
+                        <a class="catalog-item-info" href="#">
+                            <div class="title">Beauford Open Tourer <span>35,000 €</span></div>
+                            <div class="arrow"><svg><use xlink:href="img/svg/sprite.svg#arrow-right"></use></svg></div>
+                        </a>
+                    </div>
+                    <div class="catalog-item">
+                        <a class="img" href="#">
+                            <img src="img/cat-6.jpg" alt="car 1">
+                        </a>
+                        <a class="catalog-item-info" href="#">
+                            <div class="title">Beauford Open Tourer <span>35,000 €</span></div>
+                            <div class="arrow"><svg><use xlink:href="img/svg/sprite.svg#arrow-right"></use></svg></div>
+                        </a>
+                    </div>
+                    <div class="catalog-item">
+                        <a class="img" href="#">
+                            <img src="img/cat-4.jpg" alt="car 1">
+                        </a>
+                        <a class="catalog-item-info" href="#">
+                            <div class="title">Beauford Open Tourer <span>35,000 €</span></div>
+                            <div class="arrow"><svg><use xlink:href="img/svg/sprite.svg#arrow-right"></use></svg></div>
+                        </a>
+                    </div>
+                    <div class="catalog-item">
+                        <a class="img" href="#">
+                            <img src="img/cat-5.jpg" alt="car 1">
+                        </a>
+                        <a class="catalog-item-info" href="#">
+                            <div class="title">Beauford Open Tourer <span>35,000 €</span></div>
+                            <div class="arrow"><svg><use xlink:href="img/svg/sprite.svg#arrow-right"></use></svg></div>
+                        </a>
+                    </div>
+                    <div class="catalog-item">
+                        <a class="img" href="#">
+                            <img src="img/cat-6.jpg" alt="car 1">
+                        </a>
+                        <a class="catalog-item-info" href="#">
+                            <div class="title">Beauford Open Tourer <span>35,000 €</span></div>
+                            <div class="arrow"><svg><use xlink:href="img/svg/sprite.svg#arrow-right"></use></svg></div>
+                        </a>
+                    </div>
+                </div>
+                <a class="shop-content-loading" href="javascript:void(0);">Загрузить ещё</a>
+            </div>
+        </div>
+    </div>
+</div>
+        
+        <div class="gallery js-gallery">
+    <div class="photo">
+        <a href="img/photo/photo-1.jpg" data-fancybox="gallery">
+            <img src="img/photo/photo-1.jpg" alt="">
+        </a>
+    </div>
+    <div class="photo">
+        <a href="img/photo/photo-2.jpg" data-fancybox="gallery">
+            <img src="img/photo/photo-2.jpg" alt="">
+        </a>
+    </div>
+    <div class="photo">
+        <a href="img/photo/photo-3.jpg" data-fancybox="gallery">
+            <img src="img/photo/photo-3.jpg" alt="">
+        </a>
+    </div>
+    <div class="photo">
+        <a href="img/photo/photo-4.jpg" data-fancybox="gallery">
+            <img src="img/photo/photo-4.jpg" alt="">
+        </a>
+    </div>
+    <div class="photo">
+        <a href="img/photo/photo-5.jpg" data-fancybox="gallery">
+            <img src="img/photo/photo-5.jpg" alt="">
+        </a>
+    </div>
+    <div class="photo">
+        <a href="img/photo/photo-1.jpg" data-fancybox="gallery">
+            <img src="img/photo/photo-1.jpg" alt="">
+        </a>
+    </div>
+    <div class="photo">
+        <a href="img/photo/photo-2.jpg" data-fancybox="gallery">
+            <img src="img/photo/photo-2.jpg" alt="">
+        </a>
+    </div>
+    <div class="photo">
+        <a href="img/photo/photo-3.jpg" data-fancybox="gallery">
+            <img src="img/photo/photo-3.jpg" alt="">
+        </a>
+    </div>
+    <div class="photo">
+        <a href="img/photo/photo-4.jpg" data-fancybox="gallery">
+            <img src="img/photo/photo-4.jpg" alt="">
+        </a>
+    </div>
+    <div class="photo">
+        <a href="img/photo/photo-5.jpg" data-fancybox="gallery">
+            <img src="img/photo/photo-5.jpg" alt="">
+        </a>
+    </div>
+</div>
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-block">
+            <div class="footer-menu">
+                <a href="#">Ретро Автомобили</a>
+                <a href="#">Мотоциклы</a>
+                <a href="#">Реставрация</a>
+                <a href="#">Запчасти</a>
+                <a href="#">Аренда</a>
+            </div>
+            <div class="footer__logo">
+                <a class="logo" href="#">
+                    <img src="img/logo.png" alt="">
+                </a>
+                <div class="footer__contacts">
+                    <span>+33 768 0000 40</span>
+                    <span>+33 749 4200 11</span>
+                    <span>retro.style.it@gmail.com</span>
+                </div>
+                <div class="footer__social">
+                    <a href="#"><svg><use xlink:href="img/svg/sprite.svg#facebook"></use></svg></a>
+                    <a href="#"><svg><use xlink:href="img/svg/sprite.svg#viber"></use></svg></a>
+                    <a href="#"><svg><use xlink:href="img/svg/sprite.svg#skype"></use></svg></a>
+                </div>
+            </div>
+            <div class="footer-link">
+                <span>АВТОМОБИЛИ</span>
+                <a href="#">Продажа автомобилей</a>
+                <a href="#">Аренда автомобилей</a>
+                <a href="#">Рестраврация</a>
+                <a href="#">Запчасти</a>
+            </div>
+            <div class="footer-link">
+                <span>МОТОЦИКЛЫ</span>
+                <a href="#">Продажа мотоциклов</a>
+                <a href="#">Аренда мотоциклов</a>
+                <a href="#">Рестраврация</a>
+                <a href="#">Запчасти</a>
+            </div>
+            <div class="footer-link">
+                <span>АРЕНДА</span>
+                <a href="#">Ретро автомобилей</a>
+                <a href="#">Ретро мотоциклов</a>
+            </div>
+        </div>
+        <div class="footer-copy">© 2021. Все права защищены.</div>
+    </div>
+</footer>
+    <script src="js/libs.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
