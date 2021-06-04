@@ -53,8 +53,6 @@
   // =============
   var selector = ".slick-slide:not(.slick-cloned)";
 
-  // Attach custom click event on cloned elements,
-  // trigger click event on corresponding link
   $(document).on("click", ".slick-cloned", function (e) {
     $(selector)
       .eq(
@@ -76,10 +74,6 @@
     infinite: false,
     useTransform: true,
     speed: 400,
-    // prevArrow:
-    //   '<button type="button" class="single-gallery-prev"><i class="fa fa-chevron-left"></i></button>',
-    // nextArrow:
-    //   '<button type="button" class="single-gallery-next"><i class="fa fa-chevron-right"></i></button>',
     cssEase: "cubic-bezier(0.77, 0, 0.18, 1)",
   });
 
@@ -111,7 +105,6 @@
     $(".slider-nav .slick-slide.is-active").removeClass("is-active");
     $(currrentNavSlideElem).addClass("is-active");
   });
-
   $(".slider-nav").on("click", ".slick-slide", function (event) {
     event.preventDefault();
     var goToSingleSlide = $(this).data("slick-index");
@@ -150,5 +143,28 @@
       e.preventDefault();
       $('body').removeClass('mobile-filter-open');
     });
+  });
+
+  $('.js-work').slick({
+    rows: 2,
+		arrows: true,
+    prevArrow: "<button class='slider-arrow slider-arrow__prev'><svg viewBox='0 0 41 82' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M40 1L1 41L40 81' stroke='#999CA7' stroke-width='2' stroke-linejoin='round'/></svg></button>",
+    nextArrow: "<button class='slider-arrow slider-arrow__next'><svg viewBox='0 0 42 82' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 1L41 41L1 81' stroke='#999CA7' stroke-width='2' stroke-linejoin='round'/></svg></button>",
+		infinite: false,
+		speed: 300,
+		slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },{
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 })(jQuery)

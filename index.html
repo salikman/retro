@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -49,7 +49,7 @@
                             <li><a href="#" data-lang="ru">RU</a></li>
                         </ul>
                     </div>
-                    <a class="navbar__btn" href="javascript:void(0)">Перезвоните мне!</a>
+                    <a class="navbar__btn" href="#forma" data-fancybox>Перезвоните мне!</a>
                 </div>
             </div>
         </div>
@@ -428,7 +428,33 @@
         <div class="footer-copy">© 2021. Все права защищены.</div>
     </div>
 </footer>
+    <div id="forma" style="display: none; background-color: transparent;">
+    <div class="forma-modal">
+        <div class="forma-modal-wrap">
+            <form class="forma-modal-form">
+                <div>
+                    <input type="text" name="name" autocomplete="off" required="">
+                    <label for="name" class="label-txt">
+                        <span class="content-txt">Имя</span>
+                    </label>
+                </div>
+                <div>
+                    <input type="text" name="tel" autocomplete="off" required="">
+                    <label for="tel" class="label-txt">
+                        <span class="content-txt">Телефон</span>
+                    </label>
+                </div>
+                <button class="btn" type="submit">Заказать</button>
+            </form>
+            <!-- <div class="feedback-form__success">
+                <svg><use xlink:href="img/svg/sprite.svg#checked"></use></svg>
+                <span>Сообщение успешно отправлено!</span>
+            </div> -->
+        </div>
+    </div>
+</div>
     <script src="js/libs.min.js"></script>
 <script src="js/main.js"></script>
+
 </body>
 </html>
