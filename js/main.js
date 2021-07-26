@@ -119,22 +119,58 @@
       .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
   });
 
-  $(function () {
-    // mileage volume
-    $("#mileage-range").slider({
-      range: true,
-      min: 0,
-      max: 100000,
-      values: [11000, 34000],
-      slide: function (event, ui) {
-        $("#mileageOne").val(ui.values[0]);
-        $("#mileageTwo").val(ui.values[1]);
-      }
-    });
-    $("#mileageOne").val($("#mileage-range").slider("values", 0));
-    $("#mileageTwo").val($("#mileage-range").slider("values", 1));
+  function initFilterSliders() {
 
-  });
+    var sliderSubmitTimeout;
+
+    $('.js-filter-slider').each(function (ind, elem) {
+      var $sliderBlock = $(elem);
+
+      var $slider = $sliderBlock.find('.filter-range-slider');
+
+      var $minInput = $sliderBlock.find('.filter-range-slider-min');
+      var $maxInput = $sliderBlock.find('.filter-range-slider-max');
+
+      var min = parseInt($slider.data('min'));
+      var max = parseInt($slider.data('max'));
+
+      var minValue = $minInput.val() ? parseInt($minInput.val()) : min;
+      var maxValue = $maxInput.val() ? parseInt($maxInput.val()) : max;
+
+      $minInput.val(minValue);
+      $maxInput.val(maxValue);
+
+      $minInput.keyup(function () {
+        var min = parseInt($(this).val());
+        var max = parseInt($slider.slider('values')[1]);
+        $slider.slider('values', [min, max]);
+      });
+
+      $maxInput.keyup(function () {
+        var min = parseInt($slider.slider('values')[0]);
+        var max = parseInt($(this).val());
+        $slider.slider('values', [min, max]);
+      });
+
+      $slider.slider({
+        range: true,
+        min: min,
+        max: max,
+        values: [minValue, maxValue],
+        slide: function (event, ui) {
+          $minInput.val(ui.values[0]);
+          $maxInput.val(ui.values[1]);
+          clearTimeout(sliderSubmitTimeout);
+
+          sliderSubmitTimeout = setTimeout(function () {
+            submitEFilter();
+          }, 1000);
+
+        }
+      });
+    })
+  }
+  initFilterSliders();
 
   $('.btn-aside').on('click', function (e) {
     e.preventDefault();
@@ -147,24 +183,22 @@
 
   $('.js-work').slick({
     rows: 2,
-		arrows: true,
+    arrows: true,
     prevArrow: "<button class='slider-arrow slider-arrow__prev'><svg viewBox='0 0 41 82' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M40 1L1 41L40 81' stroke='#999CA7' stroke-width='2' stroke-linejoin='round'/></svg></button>",
     nextArrow: "<button class='slider-arrow slider-arrow__next'><svg viewBox='0 0 42 82' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M1 1L41 41L1 81' stroke='#999CA7' stroke-width='2' stroke-linejoin='round'/></svg></button>",
-		infinite: false,
-		speed: 300,
-		slidesToShow: 3,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        },
-      },{
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-        },
+    infinite: false,
+    speed: 300,
+    slidesToShow: 3,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
       },
-    ],
+    }, {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+      },
+    }, ],
   });
 })(jQuery)
