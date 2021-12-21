@@ -175,7 +175,13 @@
   $('.btn-aside').on('click', function (e) {
     e.preventDefault();
     $('body').toggleClass('mobile-filter-open');
+
     $('.shop-aside .close').on('click', function (e) {
+      e.preventDefault();
+      $('body').removeClass('mobile-filter-open');
+    });
+
+    $('.sidebar .close').on('click', function (e) {
       e.preventDefault();
       $('body').removeClass('mobile-filter-open');
     });
